@@ -1,0 +1,38 @@
+.leftbar {
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #1b86e9;
+    overflow-x: hidden;
+    padding-top: 20px;
+    border-right: 3px solid white;
+}
+
+.content{
+    width: 80%;
+    margin-left: 20%;
+    font-size: 28px;
+    padding: 0px 10px;
+}
+
+.inline{
+    display: -webkit-box
+}
+
+body{
+    margin: 0;
+}
+
+h5{
+    display: inline-block
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 6em;
+}
