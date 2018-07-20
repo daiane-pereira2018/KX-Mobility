@@ -1,0 +1,96 @@
+/*
+* Globals
+*/
+
+/* Links */
+a,
+a:focus,
+a:hover {
+    color: #e7eff6;
+}
+
+/*
+* Base structure
+*/
+
+html,
+body {
+    height: 100%;
+    background-color: #2a4d69;
+}
+
+body {
+    color: #e7eff6;
+}
+
+body .jumbotron {
+    color: #2a4d69;
+}
+
+body .btn.btn-outline-primary {
+    color: #63ace5;
+    border-color: #63ace5;
+}
+
+body .btn.btn-outline-primary:not(:disabled):not(.disabled):hover,
+body .btn.btn-outline-primary:not(:disabled):not(.disabled):active {
+    color: #e7eff6;
+    background-color: #63ace5;
+    border-color: #63ace5;
+}
+
+body .snake-body {
+    background-color: green;
+}
+  
+body .food {
+    background-color: #ff0800;
+}
+
+/*
+* Header
+*/
+header {
+    margin: 1rem 0 2rem;
+    border-bottom: .25rem solid transparent;
+}
+
+header h3 {
+    color: #e7eff6;
+}
+
+header .nav .nav-link {
+    font-weight: 700;
+    color: #adcbe3;
+    background-color: transparent;
+    border-bottom: .25rem solid transparent;
+}
+
+header .nav .nav-link:hover,
+header .nav .nav-link:focus {
+    border-bottom-color: #63ace5;
+}
+
+header .nav .active {
+    color: #e7eff6;
+    border-bottom-color: #e7eff6;
+}
+
+@media (min-width: 48em) {
+    header h3 {
+        float: left;
+    }
+    header .nav {
+        float: right;
+    }
+}
+
+/*
+* Footer
+*/
+.footer {
+    color: #4b86b4;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
