@@ -1,16 +1,356 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Html & Css </title>
-        <style>
-            body {
-                font-family: Arial, Helvetica, sans-serif;
-            }
-            p{
-                font-size: 14px;
-            }
-        </style>
-    </head>
-    <body>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Website Title -->
+    <title>Mobile Lab</title>
+    
+    <!-- Styles -->
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,600,600i" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/swiper.css" rel="stylesheet">
+	<link href="css/line-awesome.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+	
+	<!-- Favicon  -->
+    <link rel="icon" href="images/favicon.png">
+</head>
+
+<body data-spy="scroll" data-target=".fixed-top">
+    <!-- Navigation -->
+    <nav>
+        <div id="menuToggle">
+            <input id="isAgeSelected" type="checkbox" />
+
+            <!-- Hamburger Icon -->
+            <span></span>
+            <span></span>
+            <span></span>
+            
+            <ul id="menu">
+                <li><a href="#header" class="page-scroll">Home</a></li>
+                <li><a href="#features" class="page-scroll">Serviços</a></li>
+                <li><a href="#moreapps" class="page-scroll">Portifólio</a></li>
+                <li><a href="#contact" class="page-scroll">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- end of navigation -->
+    
+
+    <!-- Header -->
+    <header id="header" class="header">
+            
+        <!-- Logo Image -->
+        <a class="logo-txt" href="index.html"> 
+            Mobile Lab
+        </a>
+
+        <!-- Image Slider Header Bg -->
+        <div class="swiper-container imageSliderHeaderBg">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide first">
+                </div>
+                <div class="swiper-slide second">
+                </div>
+                <div class="swiper-slide third">
+                </div>
+            </div>
+        </div>
+        <!-- end of image slider header bg -->
+        
+        <div class="content-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-6 offset-lg-1">
+                        <div class="text-area">
+                            <h1 class="header-h1">Mobile Apps para o seu Negócio</h1>
+                            <p class="header-p"> Está a procura da empresa perfeita para desenvolver o seu App? Mobile Lab é justamente o que você precisa! Desenvolvemos para Android e iOS</p>
+                            <a href="#" class="apple-store"></a> <a href="#" class="google-store"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-5">
+                        <div class="image-area">
+                            <img class="header-phone img-fluid" src="images/header-iphone.png" alt="description">
+                        </div>
+                    </div>
+                </div> 
+            </div> 
+        </div> 
+    </header> 
+    <!-- end of header -->
+
+    <!-- Testimonials -->
+    <div class="section-1">
+        
+        <!-- Cards Slider -->
+        <div class="container">
+            <div class="row">
+                <div class="swiper-container cardsSlider">
+                    <div class="swiper-wrapper">
+                        
+                        <!-- Slide -->
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <span>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </span>
+                                <div class="card-body">
+                                    <p class="quote-text"> Estava a procura de uma empresa como esta a muito tempo e agora que encontrei, não largo mais! </p>
+                                    <h5 class="quote-author">Maria Silva</h5>
+                                </div>
+                            </div>
+                        </div> 
+                    </div> 
+
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>        
+            </div> 
+        </div>     
+    </div> 
+    <!-- end of testimonials -->
+
+    <!-- Services -->
+    <div id="features" class="section-2">
+        <div class="container">
+            <div class="row">
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-container-1" role="tabpanel" aria-labelledby="pills-nav-1">
+                        <div class="container">
+                            <div class="row">
+                                
+                                <!-- Icon Cards Pane -->
+                                <div class="col-lg-4">
+                                    <div class="card left-pane">
+                                        <i class="card-icon la la-compass la-5x"></i>
+                                        <div class="card-body">
+                                            <h4 class="card-title">Nacional</h4>
+                                            <p>Entregamos Apps para empresas em todo o território nacional</p>
+                                        </div>
+                                    </div>
+                                    <div class="card left-pane">
+                                        <i class="card-icon la la-code-fork la-5x"></i>
+                                        <div class="card-body">
+                                            <h4 class="card-title"> Editor Visual</h4>
+                                            <p> Mobile Lab  provê um editor visual junto com o seu App para que você possa editar pequenas features quando e como quiser!</p>
+                                        </div>
+                                    </div>
+                                    <div class="card left-pane">
+                                        <i class="card-icon la la-diamond la-5x"></i>
+                                        <div class="card-body">
+                                            <h4 class="card-title">Opções Refinadas</h4>
+                                            <p> Fazemos todos os tipos de Apps, utilizando desde opções simples e refinadas até as mais refinadas</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end of icon cards pane -->
+
+                                <!-- Image Pane -->
+                                <div class="col-lg-4">
+                                    <img class="img-fluid" src="images/features-iphone-1.png" alt="description">
+                                </div>
+                                <!-- end of image pane -->
+
+                            </div> 
+                        </div> 
+                    </div> 
+                </div>
+            </div>
+        </div>
+    <!-- end of features -->
+
+
+    <!-- Statistics Numbers -->
+    <div class="section-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <!-- Statistics Numbers CountTo -->
+                    <div id="counter">
+                        <div class="cell">
+                            <div class="counter-value number-count" data-count="231">1000</div>
+                            <p>Usuários Felizes</p>
+                        </div>
+                        <div class="cell">
+                            <div class="counter-value number-count" data-count="85">105</div>
+                            <p>Problemas Resolvidos</p>
+                        </div>
+                        <div class="cell">
+                            <div class="counter-value number-count" data-count="59">967</div>
+                            <p>Boas Reviews</p>
+                        </div>
+                        <div class="cell">
+                            <div class="counter-value number-count" data-count="127">1200</div>
+                            <p>Apps Entregados</p>
+                        </div>
+                    </div>
+                    <!-- end of statistics numbers countto -->
+
+                    <p class="header-p"> Nosso objetivo é ajudar no crescimento de todos os negócios de grandes e pequenas empresas.</p>
+                </div> 
+            </div> 
+        </div> 
+    </div> 
+    <!-- end of statistics numbers -->
+
+
+    <!-- Portfólio -->
+    <div id="moreapps" class="section-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Nossos Apps</h2>
+                    <p class="under-heading"> Nosso portifólio de Apps abrange inúmeros ramos de negócio! Veja alguns exemplos e inpire-se para montar o seu.</p>
+                </div> <!-- end of col-md-12 -->
+            </div> <!-- end of row -->
+            
+            <div class="row">
+                
+                <!-- Apps -->
+                <div class="col-xs-12 col-lg-3">
+                    <div class="card text-center">
+                        <a class="popup-with-move-anim" href="#app-info-1">
+                            <div class="image-container">
+                                <img class="img-fluid" src="images/more-apps-1.jpg" alt="description">
+                            </div>
+                        </a>
+                        <div class="card-body">
+                            <a class="popup-with-move-anim" href="#app-info-1"><h4 class="card-title">Negócio</h4></a>
+                            <p>Aplicativo de gerenciamento de negócios para melhorar seu fluxo operacional e aumentar os lucros</p>
+                            <a class="button-solid-white popup-with-move-anim" href="#app-info-1">Details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of app -->
+
+                <!-- App -->
+                <div class="col-xs-12 col-lg-3">
+                    <div class="card text-center">
+                        <a class="popup-with-move-anim" href="#app-info-2">
+                            <div class="image-container">
+                                <img class="img-fluid" src="images/more-apps-2.jpg" alt="description">
+                            </div>
+                        </a>
+                        <div class="card-body-red">
+                            <a class="popup-with-move-anim" href="#app-info-2"><h4 class="card-title">Fitness</h4></a>
+                            <p>Entre em forma rapidamente com os planos de exercícios fornecidos pelo aplicativo de condicionamento físico</p>
+                            <a class="button-solid-white popup-with-move-anim" href="#app-info-2">Details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of app -->
+
+                <!-- App -->
+                <div class="col-xs-12 col-lg-3">
+                    <div class="card text-center">
+                        <a class="popup-with-move-anim" href="#app-info-3">
+                            <div class="image-container">
+                                <img class="img-fluid" src="images/more-apps-3.jpg" alt="description">
+                            </div>
+                        </a>
+                        <div class="card-body">
+                            <a class="popup-with-move-anim" href="#app-info-3"><h4 class="card-title"> Finanças</h4></a>
+                            <p>Comece a economizar nos dias chuvosos. Este aplicativo irá ajudá-lo a economizar dinheiro a longo prazo</p>
+                            <a class="button-solid-white popup-with-move-anim" href="#app-info-3">Details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of app -->
+
+                <!-- App -->
+                <div class="col-xs-12 col-lg-3">
+                    <div class="card text-center">
+                        <a class="popup-with-move-anim" href="#app-info-4">
+                            <div class="image-container">
+                                <img class="img-fluid" src="images/more-apps-4.jpg" alt="description">
+                            </div>
+                        </a>
+                        <div class="card-body-red">
+                            <a class="popup-with-move-anim" href="#app-info-4"><h4 class="card-title">Viagens</h4></a>
+                            <p>Encontre o melhor hotel, seguro de saúde e transporte para viagens</p>
+                            <a class="button-solid-white popup-with-move-anim" href="#app-info-4">Details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of app -->
+            </div>
+        </div> 
+    </div> 
+
+
+    <!-- Contact -->
+    <div id="contact" class="section-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="text-center">Contato</h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="text-area">
+                        <h4>Fale Conosco</h4>
+                        <p> 
+                                Use o formulário de contato para nos enviar sua mensagem ou nos visitar na sede do nosso escritório e tomar uma xícara de café.</p>
+                        <ul class="contact-list list-unstyled list-inline">
+                            <li class="list-inline-item"><i class="fas fa-map-marker-alt" aria-hidden="true"></i>1322 Area Inovadora, São Paulo, Brasil</li>
+                            <li class="list-inline-item"><i class="fas fa-phone" aria-hidden="true"></i><a class="phone-number" href="tel:003024630820">+55 11 999999999 </a></li>
+                            <li class="list-inline-item"><i class="far fa-envelope" aria-hidden="true"></i><a class="underline-light" href="mailto:contact@sena.com">contact@mobilelab.com</a></li>
+                            <li class="list-inline-item"><i class="fab fa-chrome" aria-hidden="true"></i><a class="underline-light" href="#your-link">www.mobilelab.com</a></li>
+                        </ul>
+                    </div> <!-- end of text-area -->
+                </div> <!-- end of col-md-6 -->
+            
+                <!-- Contact Form -->
+                <div class="col-lg-6">
+                    <form id="ContactForm" data-toggle="validator">
+                        <div class="form-group">
+                            <input type="text" class="form-control-input" id="cname" placeholder="Nome" required>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control-input" id="cemail" placeholder="Email" required>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group textarea">
+                            <textarea class="form-control-textarea" id="cmessage" placeholder="Escreva sua mensagem aqui"></textarea>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="form-control-submit-button">Enviar</button>
+                        </div>
+                        <div class="form-message">
+                            <div id="msgCSubmit" class="h3 text-center hidden"></div>
+                        </div>
+                    </form>
+                </div>
+                <!-- end of contact form -->
+            </div> 
+        </div> 
+    </div> 
+    <!-- end of contact -->
+
+
+    <!-- Copyright -->
+    <div class="section-6">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Copyright © Mobile Lab </a></p>
+                </div>
+            </div>
+        </div>
+    </div> 
+    
+    
+</body>
 </html>

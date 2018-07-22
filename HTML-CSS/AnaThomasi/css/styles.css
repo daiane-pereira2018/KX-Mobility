@@ -1,0 +1,971 @@
+
+/*
+Table Of Contents:
+
+01. General Styles
+02. Navigation
+03. Header
+04. Testimonials
+05. Services
+06. Statistics
+07. Portifolio
+08. Contact
+09. Copyright
+10. Media Queries
+*/
+
+
+/* 01. General Styles*/
+body,
+html {
+    width: 100%;
+	height: 100%;
+}
+
+body, p {
+	color: #fff; 
+	font: 300 15px/25px "Fira Sans", sans-serif;
+}
+
+h1 {
+	font: 600 3rem/3.5rem "Fira Sans", sans-serif;
+}
+
+h2 {
+	font: 600 2.25rem/2.875rem "Fira Sans", sans-serif;
+}
+
+h3 {
+	font: 600 1.5rem/2rem "Fira Sans", sans-serif;
+}
+
+h4 {
+	font: 600 1.375rem/1.875rem "Fira Sans", sans-serif;
+}
+
+h5 {
+	font: 600 1rem/1.5rem "Fira Sans", sans-serif;
+}
+
+.header-h1 {
+	margin-bottom: 1.5rem;
+	font: 600 3rem/3.625rem "Fira Sans", sans-serif;
+}
+
+.header-p {
+	margin-bottom: 2rem;
+	font: 300 1.125rem/1.75rem "Fira Sans", sans-serif;
+}
+
+.under-heading {
+	margin-top: 1rem;
+	margin-bottom: 4rem;
+}
+
+a {
+	color: #fff; 
+}
+
+a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+.underline-light {
+	color: #fc8b56;
+}
+
+.quote-text {
+	font: italic 300 15px/25px "Fira Sans", sans-serif;
+}
+
+.quote-author {
+	font: italic 600 1.125rem/1.75rem "Fira Sans", sans-serif;
+}
+
+.button-solid-white {
+	display: inline-block;
+	padding: 7px 30px 6px 30px;
+	border: 1px solid #fff;
+	border-radius: 50px;
+	background-color: #fff;
+	color: #fc8b56;
+	font: 400 15px/25px "Fira Sans", sans-serif;
+	transition: all 0.3s ease;
+}
+
+.button-solid-white:hover {
+	background-color: transparent;
+	color: #fff;
+}
+.form-control-input {
+	width: 100%;
+	height: 2.75rem;
+	padding-left: 1rem;
+    border: 1px solid #fff;
+	border-radius: 6px;
+	background-color: #fff;
+	color: #405266;
+	font: 300 15px/25px "Fira Sans", sans-serif;
+	-webkit-appearance: none;
+}
+
+.form-control-textarea {
+	display: block; 
+	width: 100%;
+	height: 8rem;
+	padding-top: 0.75rem;
+	padding-left: 1rem;
+	border: 1px solid #fff;
+	border-radius: 6px;
+	background-color: #fff;
+	color: #405266;
+	font: 300 15px/25px "Fira Sans", sans-serif;
+}
+
+.form-control-input::placeholder,
+.form-control-textarea::placeholder {
+	color: #87919c;
+}
+
+.form-control-input::-webkit-input-placeholder,
+.form-control-textarea::-webkit-input-placeholder { 
+	color: #87919c;
+}
+
+.form-control-input::-moz-placeholder,
+.form-control-textarea::-moz-placeholder { 
+	color: #87919c;
+}
+
+.form-control-input:-ms-input-placeholder,
+.form-control-textarea:-ms-input-placeholder { 
+	color: #87919c;
+}
+
+.form-control-input:-moz-placeholder,
+.form-control-textarea:-moz-placeholder { 
+	color: #87919c;
+}
+
+.form-control-submit-button {
+	display: inline-block;
+	width: 100%;
+	height: 2.75rem;
+	border: 1px solid #fc8b56;
+	border-radius: 50px;
+	background-color: #fc8b56;
+	color: #fff;
+	font: 400 15px/25px "Fira Sans", sans-serif;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.form-control-submit-button:hover {
+	border: 1px solid #fff;
+	background-color: #fff;
+	color: #fc8b56;
+}
+
+
+/* 02. Navigation*/
+
+#menuToggle {
+	display: block;
+	position: fixed;
+	top: 47px;
+	right: 20px;
+	left: auto;
+	z-index: 4;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+#menuToggle input {
+	display: block;
+	width: 40px;
+	height: 32px;
+	position: absolute;
+	top: -7px;
+	left: -5px;
+	cursor: pointer;
+	opacity: 0;
+	z-index: 4; 
+	-webkit-touch-callout: none;
+}
+
+#menuToggle span {
+	display: block;
+	position: relative;
+	z-index: 3;
+	width: 33px;
+	height: 4px;
+	margin-bottom: 5px;
+	background: #fff;
+	border-radius: 3px;
+	transform-origin: 4px 0px;
+	transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+				background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+				opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+	transform-origin: 0% 0%;
+}
+#menuToggle span:nth-last-child(2) {
+  	transform-origin: 0% 100%;
+}
+#menuToggle input:checked ~ span {
+	opacity: 1;
+	transform: rotate(45deg) translate(-2px, -1px);
+	background: #fff;
+}
+#menuToggle input:checked ~ span:nth-last-child(3) {
+	opacity: 0;
+	transform: rotate(0deg) scale(0.2, 0.2);
+}
+#menuToggle input:checked ~ span:nth-last-child(2) {
+	transform: rotate(-45deg) translate(0, -1px);
+}
+#menu {
+	position: absolute;
+	width: 220px;
+	margin: -100px 0 0 -170px;
+	padding: 125px 50px 35px 35px;
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	background: #374450;
+	list-style-type: none;
+	-webkit-font-smoothing: antialiased;
+	transform-origin: 0% 0%;
+	transform: translate(115%, 0);
+	transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+#menu li {
+	padding: 10px 0;
+	color: #fff;
+	font-size: 20px;
+}
+#menu li:active,
+#menu li:hover a {
+	color: #fc8b56;
+}
+#menuToggle input:checked ~ ul {
+	transform: none;
+}
+
+
+/*   03. Header  */
+
+.header {
+	position: relative;
+	width: 100%;
+	text-align: center;
+}
+
+.header .swiper-container {
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+}
+
+.header .swiper-container .swiper-slide.first {
+	background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3));
+	background-size: cover; 
+}
+
+.header .swiper-container .swiper-slide.second {
+	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4));
+	background-size: cover; 
+}
+
+.header .swiper-container .swiper-slide.third {
+	background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
+	background-size: cover; 
+}
+
+.header .logo-img {
+	z-index: 2;
+	width: 97px;
+	height: 34px;
+	top: 2.625rem;
+	left: 1rem;
+}
+
+.header .logo-txt {
+	position: absolute;
+	z-index: 2;
+	display: inline-block;
+	top: 3.125rem;
+	left: 1rem;
+	font: italic 600 2.75rem/1rem "Fira Sans", sans-serif;
+}
+
+.header .content-wrapper {
+	position: relative;
+	z-index: 2;
+	padding-top: 8.625rem;
+	padding-bottom: 5rem;
+}
+
+.header .text-area {
+	text-align: center;
+	margin-bottom: 3rem;
+}
+
+.header .apple-store {
+	display: inline-block;
+	width: 224px;
+	height: 56px;
+	margin-right: 0.25rem;
+	margin-left: 0.25rem;
+	margin-bottom: 0.625rem;
+	background: url('../images/apple-store.png');
+	background-size: cover;
+	transition: all 0.2s;
+}
+
+.header .apple-store:hover {
+	background: url('../images/apple-store-hover.png');
+	background-size: cover;
+}
+
+.header .google-store {
+	display: inline-block;
+	width: 224px;
+	height: 56px;
+	margin-right: 0.25rem;
+	margin-left: 0.25rem;
+	margin-bottom: 0.625rem;
+	background: url('../images/google-store.png');
+	background-size: cover;
+	transition: all 0.2s;
+}
+
+.header .google-store:hover {
+	background: url('../images/google-store-hover.png');
+	background-size: cover;
+}
+
+.header .image-area {
+	max-width: 325px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+
+/*04. Testimonials*/
+
+.section-1 {
+	padding-top: 5rem;
+	padding-bottom: 3rem;
+	background-color: #374450;
+	text-align: center;
+}
+
+.section-1 .swiper-container {
+	padding-bottom: 26px;
+}
+
+.section-1 .swiper-pagination {
+	bottom: 0px;
+}
+
+.section-1 .swiper-pagination-bullets .swiper-pagination-bullet {
+	width: 11px;
+	height: 11px;
+	margin: 0 6px;
+	background: #efefef;
+}
+
+.section-1 .card {
+	border: none;
+	background-color: transparent;
+	z-index: 1;
+}
+
+.section-1 .fa-star {
+	display: inline-block;
+	color: #fc8b56;
+	font-size: 26px;
+}
+
+.section-1 .quote-text {
+	margin-bottom: 0.5rem;
+	font-style: italic;
+}
+
+
+
+/*     05. Services    */
+
+.section-2 {
+	padding-top: 6.5rem;
+	padding-bottom: 4rem;
+	background-color: #43515d;
+}
+
+.section-2 .nav {
+	margin-bottom: 4rem;
+}
+
+.section-2 .nav-pills {
+	margin-right: auto;
+	margin-left: auto;
+	justify-content: center;
+}
+
+.section-2 .nav-link {
+	margin-right: 0.375rem;
+	margin-left: 0.375rem;
+	margin-bottom: 1rem;
+	padding: 0.625rem 2.375rem 0.625rem 2.375rem;
+	border: 1px solid #fff;
+	border-radius: 50px;
+	color: #fff;
+	font: 500 1.125rem/1.75rem "Fira Sans", sans-serif;
+}
+
+.section-2 .nav-link.active {
+	border: 1px solid #fc8b56;
+	background: #fc8b56;
+}
+
+.section-2 .nav-link .svg-inline--fa {
+	margin-right: 0.375rem;
+	font-size: 17px;
+}
+
+.section-2 .tab-content {
+	width: 100%; /* for proper display in IE11 */
+}
+
+.section-2 .card {
+	border: none;
+	background: transparent;
+}
+
+.section-2 .card-body {
+	padding-top: 0.75rem;
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.section-2 .card-title {
+	margin-bottom: 0.5rem;
+}
+
+.section-2 #pills-container-1 .card p {
+	margin-bottom: 0.5rem;
+}
+
+.section-2 #pills-container-1 .card.left-pane .card-icon {
+	margin-left: 0;
+}
+
+.section-2 #pills-container-1 img {
+	display: block;
+	margin-top: 2rem;
+	margin-right: auto;
+	margin-bottom: 4rem;
+	margin-left: auto;
+}
+
+.section-2 #pills-container-1 .card.right-pane .card-icon {
+	margin-left: 0;
+}
+
+.section-2 #pills-container-2 img {
+	display: block;
+	margin: 0 auto 2rem auto;
+}
+
+.section-2 #pills-container-2 .text-area {
+	margin-top: 1.5rem;
+}
+
+.section-2 #pills-container-2 h3 {
+	margin-bottom: 0.75rem;
+}
+
+.section-2 #pills-container-2 .icon-cards-area {
+	margin-top: 2.5rem;
+}
+
+.section-2 #pills-container-2 .icon-cards-area .card {
+	width: 100%; 
+}
+
+.section-2 #pills-container-3 .icon-cards-area .card {
+	width: 100%; 
+}
+
+.section-2 #pills-container-3 .text-area {
+	margin-top: 0.5rem;
+	margin-bottom: 4rem;
+}
+
+.section-2 #pills-container-3 h3 {
+	margin-bottom: 0.75rem;
+}
+
+.section-2 #pills-container-3 img {
+	margin-bottom: 3rem;
+}
+
+
+/*    06. Statistics    */
+
+.section-3 {
+	padding-top: 6.25rem;
+	padding-bottom: 6.375rem;
+	background: #dd4b39;
+	background-size: cover;
+	text-align: center;
+}
+
+.section-3 #counter .cell {
+	display: inline-block;
+	width: 11rem;
+	margin-bottom: 2.25rem;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.section-3 #counter .number-count {
+	margin-bottom: 0.5rem;
+	color: #fff;
+	font: 600 4.5rem/3.75rem "Fira Sans", sans-serif;	
+}
+
+.section-3 #counter .cell p {
+	margin-bottom: 0;
+	color: #fff;
+	font: 300 15px/25px "Fira Sans", sans-serif;
+}
+
+.section-3 .header-p {
+	width: 80%;
+	margin-right: auto;
+	margin-bottom: 1.5rem;
+	margin-left: auto;
+}
+
+
+/*     07. Portfolio     */
+
+.section-4 {
+	padding-top: 6rem;
+	padding-bottom: 2.5rem;
+	background-color: #43515d;
+	text-align: center;
+}
+
+.section-4 .card {
+	max-width: 370px;
+	margin: 0 auto 4rem auto;
+	border: none;
+	background-color: transparent;
+}
+
+.section-4 .popup-with-move-anim:first-of-type {
+	height: 100%; 
+}
+
+.section-4 .image-container {
+	overflow: hidden;
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+}
+
+.section-4 .image-container img {
+	margin: 0px;
+	transition: all 0.3s;
+}
+
+.section-4 .image-container img:hover {
+	-moz-transform: scale(1.15);
+	-webkit-transform: scale(1.15);
+	transform: scale(1.15);
+} 
+
+.section-4 .card-body {
+	padding: 1.625rem 1.125rem 1.875rem 1.125rem;
+	border-bottom-left-radius: 12px;
+	border-bottom-right-radius: 12px;
+	background-color: #fc8b56;
+}
+
+.section-4 .card-body-red {
+	padding: 1.625rem 1.125rem 1.875rem 1.125rem;
+	border-bottom-left-radius: 12px;
+	border-bottom-right-radius: 12px;
+	background-color: #fd5656;
+}
+
+.section-4 .card-title {
+	margin-bottom: 0.5rem;
+}
+
+.section-4 .card-body p,
+.section-4 .card-body-red p {
+	margin-bottom: 1rem;
+}
+
+
+
+/*08. Contact*/
+
+.section-5 {
+	padding-top: 6rem;
+	padding-bottom: 5.5rem;
+	background-color: #374450;
+}
+
+.section-5 h2 {
+	margin-bottom: 3rem;
+}
+
+.section-5 .text-area {
+	margin-bottom: 3rem;
+}
+
+.section-5 .contact-list {
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+}
+
+.section-5 li .svg-inline--fa {
+	margin-right: 0.5rem;
+}
+
+.section-5 .fa-fw {
+	width: 3rem;
+	margin-top: 0.5rem;
+	margin-right: 0.125rem;
+	font-size: 3rem;
+	cursor: pointer;
+}
+
+.section-5 .fa-fw .fa-1x {
+	font-size: 2rem;
+}
+
+.section-5 .fa-fw .fa-circle.facebook {
+    color: #3b5998;
+}
+
+.section-5 .fa-fw .fa-circle.twitter {
+    color: #45b0e3;
+}
+
+.section-5 .fa-fw .fa-circle.google-plus {
+    color: #dd4b39;
+}
+
+.section-5 .fa-fw .fa-circle.instagram {
+    color: #d51a6f;
+}
+
+.section-5 .fa-fw .fa-circle.linkedin {
+    color: #0177b5;
+}
+
+.section-5 .fa-fw .fa-circle.youtube {
+    color: #ff0000;
+}
+
+
+/*     09. Copyright     */
+
+.section-6 {
+	padding-top: 1.5rem;
+	padding-bottom: 0.125rem;
+	background-color: #303c47;
+	text-align: center;
+}
+
+
+
+/*     10. Media Queries     */
+	
+@media (min-width: 768px)	{
+	
+
+	.lightbox-split-image-text {
+		padding: 3rem 3rem;
+	}
+
+	.header .content-wrapper {
+		padding-top: 9.75rem;
+		padding-bottom: 7rem;
+	}
+
+	.header .text-area {
+		margin-top: 2rem;
+		margin-bottom: 0rem;
+		text-align: left;
+	}
+	
+	.header .google-store {
+		margin-bottom: 0rem;
+	}
+
+	.header .image-area {
+		margin-left: 0;
+	}
+
+	.section-2 .card-body {
+		margin-right: 0.5rem;
+		margin-left: 0.5rem;
+	}
+
+	.section-2 #pills-container-2 img {
+		margin-bottom: 0;
+	}
+
+	.section-2 #pills-container-2 .text-area {
+		margin-top: 0;
+		margin-right: 0.5rem;
+		margin-left: 0.5rem;
+	}
+
+	.section-2 #pills-container-2 .icon-cards-area .card {
+		display: inline-block;
+		width: 44%;
+		margin-right: 1rem;
+		vertical-align: top;
+	}
+
+	.section-2 #pills-container-3 .text-area {
+		margin-right: 0.5rem;
+		margin-left: 0.5rem;
+		margin-bottom: 2rem;
+	}
+
+	.section-2 #pills-container-3 .icon-cards-area .card {
+		display: inline-block;
+		width: 44%;
+		margin-right: 1rem;
+		vertical-align: top;
+	}
+
+	.section-2 #pills-container-3 img {
+		margin-bottom: 0;
+	}
+
+	.section-5 .fa-fw {
+		margin-right: 0.375rem;
+	}
+}
+
+
+
+@media (min-width: 992px) {
+	
+	
+	h1 {
+		font: 600 3.5rem/4.25rem "Fira Sans", sans-serif;
+	}
+	
+	h2 {
+		font: 600 2.75rem/3.25rem "Fira Sans", sans-serif;
+	}
+	
+	h3 {
+		font: 600 2rem/2.75rem "Fira Sans", sans-serif;
+	}
+	
+	.header-h1 {
+		font: 600 3.5rem/4.25rem "Fira Sans", sans-serif;
+	}
+
+	.header-p {
+		font: 300 1.25rem/2rem "Fira Sans", sans-serif;
+	}
+
+	.under-heading {
+		width: 60%;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.lightbox-split-image-text img {
+		max-width: 98%;
+		margin-bottom: 0;
+	}
+	
+	#menuToggle {
+		right: 40px;
+	}
+
+	.header {
+		height: 100%;
+	}
+
+	.header .logo-img {
+		width: 114px;
+		height: 40px;
+		top: 2.25rem;
+		left: 2.5rem;
+	}
+
+	.header .logo-txt {
+		top: 3rem;
+		left: 2rem;
+		font: italic 600 3.25rem/1rem "Fira Sans", sans-serif;
+	}
+
+	.header .content-wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100vh;
+	}
+
+	.header .text-area {
+		margin-top: 3rem;
+	}
+
+	.header .image-area {
+		max-width: none; 
+		width: 325px;
+	}
+
+	.section-2 #pills-container-1 .card.left-pane .card-icon {
+		margin-right: 0;
+		margin-left: auto;
+	}
+
+	.section-2 #pills-container-1 .card.left-pane {
+		text-align: right;
+	}
+
+	.section-2 #pills-container-1 img {
+		margin-bottom: 0;
+	}
+	
+	.section-2 #pills-container-1 .card.right-pane .card-icon {
+		margin-right: auto;
+		margin-left: 0;
+	}
+
+	.section-2 #pills-container-2 .icon-cards-area .card {
+		width: 48%;
+		margin-right: 0.25rem;
+		margin-left: 0.25rem;
+	}
+
+	.section-2 #pills-container-3 .icon-cards-area .card {
+		width: 47%;
+	}
+
+	.section-4 {
+		padding-bottom: 3.5rem;
+	}
+
+	.section-5 form {
+		max-width: 470px;
+	}
+
+	.section-5 .text-area {
+		margin-top: 0.625rem;
+		margin-bottom: 0;
+	}
+}
+
+@media (min-width: 1200px) {
+	
+	.header-h1 {
+		font: 600 4rem/4.75rem "Fira Sans", sans-serif;
+	}
+
+	.header .text-area {
+		margin-top: 7.5rem;
+	}
+
+	.header .image-area {
+		width: 350px;
+	}
+
+	.header .apple-store {
+		margin-bottom: 0rem;
+	}
+
+	.section-2 {
+		padding-bottom: 4.5rem;
+	}
+
+	.section-2 .card-body {
+		margin-right: 1rem;
+		margin-left: 1rem;
+	}
+
+	.section-2 #pills-container-1 .card {
+		margin-bottom: 0.5rem;
+	}
+
+	.section-2 #pills-container-1 .card.left-pane .card-icon {
+		margin-right: 1rem;
+	}
+
+	.section-2 #pills-container-1 img {
+		margin-top: 0;
+	}
+
+	.section-2 #pills-container-1 .card.right-pane .card-icon {
+		margin-left: 1rem;
+	}
+
+	.section-2 #pills-container-2 .container {
+		padding-right: 2.5rem;
+		padding-left: 2.5rem;
+	}
+
+	.section-2 #pills-container-2 .text-area {
+		margin-top: 1.5rem;
+		margin-right: 1.5rem;
+		margin-left: 1.5rem;
+	}
+
+	.section-2 #pills-container-2 .card-icon {
+		margin-left: 1rem;
+	}
+	
+	.section-2 #pills-container-2 .icon-cards-area {
+		margin-top: 2.5rem;
+		margin-left: 0.375rem;
+	}
+
+	.section-2 #pills-container-3 .container {
+		padding-right: 2.5rem;
+		padding-left: 2.5rem;
+	}
+	
+	.section-2 #pills-container-3 .icon-cards-area {
+		margin-top: 1rem;
+	}
+	
+	.section-2 #pills-container-3 .card-icon {
+		margin-left: 1rem;
+	}
+
+	.section-2 #pills-container-3 .text-area {
+		margin-right: 1.5rem;
+		margin-left: 1rem;
+	}
+
+	.section-4 .card {
+		max-width: 248px;
+	}
+
+	.section-5 .text-area {
+		margin-left: 3rem;
+	}
+	
+	.section-5 form {
+		margin-left: 1rem;
+	}
+}
