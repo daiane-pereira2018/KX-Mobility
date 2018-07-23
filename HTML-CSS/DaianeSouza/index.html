@@ -1,16 +1,88 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Html & Css </title>
-        <style>
-            body {
-                font-family: Arial, Helvetica, sans-serif;
-            }
-            p{
-                font-size: 14px;
-            }
-        </style>
-    </head>
-    <body>
-    </body>
+<head>
+    
+    <meta charset="utf-8">
+    <title>Estudos HTML5 e CSS</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto+Slab:400,700|Pacifico' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+  
+<body>
+    
+    <nav>
+        <a href="#">Conheça o mundo!</a>
+        <ul>
+            <li><a href="#sobre">SOBRE</a></li>
+            <li><a href="#servicos">SERVIÇOS</a></li>
+            <li><a href="#paises">PAÍSES</a></li>
+            <li><a href="#contato">CONTATO</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Conheça o Mundo!</h1>
+        <p>Se você é aquela pessoa que sonha em voar e conhecer o mundo, nós te daremos as suas asas!</p>
+        <a href="#sobre" class="botao">VER MAIS</a>
+    </header>
+
+    <section id="sobre">
+        <h2>SOBRE</h2>
+        <p>Somos especialistas em ajudar pessoas a realizar o sonho de conhecer diversos países!</p>
+        <a href="#contato" class="botao">ENTRE EM CONTATO</a>
+    </section>
+
+    <section id="servicos">
+        <h2>SERVIÇOS</h2>
+        <div>
+            <img src="Imagens/airplane-flight.png" alt="Avião">
+            <h3>Passagem Aérea</h3>
+            <p>Podemos encontrar passagens com preços mais acessíveis.</p>
+        </div>
+        <div>
+            <img src="Imagens/hotel-bell.png" alt="Hotel">
+            <h3>Hospedagem</h3>
+            <p>Hospedagem aconchegante e com baixo custo.</p>
+        </div>
+        <div>
+            <img src="Imagens/id-card.png" alt="Passaporte">
+            <h3>Visto e Passaporte</h3>
+            <p>Podemos facilitar a concessão de seu visto e passaporte.</p>
+        </div>
+        <div>
+            <img src="Imagens/heart.png" alt="Coração">
+            <h3>Feito com Amor</h3>
+            <p>Todos os nossos serviços prestados com amor e para que você realize seu sonho!</p>
+        </div>
+    </section>
+
+    <section id="paises">
+        <h2>PAÍSES</h2>
+        <img src="Imagens/Alemanha.jpg" alt="Alemanha">
+        <img src="Imagens/Canada.jpg" alt="Canadá">
+        <img src="Imagens/EUA.jpg" alt="EUA">
+        <img src="Imagens/Inglaterra.jpg" alt="Inglaterra">
+        <img src="Imagens/Espanha.jpg" alt="Espanha">
+        <img src="Imagens/Portugal.jpg" alt="Portugal">
+    </section>
+
+    <section id="contato">
+        <h2>CONTATO</h2>
+        <p>Entre em contato conosco.</p>
+        <div>
+            <img src="Imagens/phone.png" alt="fone">
+            <p><a href="tel:xx55555555">(xx) 5555 5555</a></p>
+        </div>
+
+        <div>
+            <img src="Imagens/contato.png" alt="email">
+            <p><a href="mailto:email@contato.com">email@contato.com</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Desenvolvido por Daiane Pereira.</p>
+    </footer>
+    
+</body>
 </html>

@@ -19,9 +19,9 @@ function loadHighscore() {
     for (var i = 0; i < score.length; i++) {
         text = score[i];
         if (text == 1)
-            text += " point";
+            text += " ponto";
         else
-            text += " points";
+            text += " pontos";
 
         item = $("<li>").text(text);
         list.append(item);
