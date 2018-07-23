@@ -1,22 +1,41 @@
-var score = JSON.parse(localStorage.getItem('scoreArray')) || [],
-    list = $("<ol>"),
-    item,
-    text;
+function loadHighscore() {
+    var storageScore = localStorage.getItem('scoreArray'),
+        score,
+        list = $("<ol>"),
+        item,
+        text;
 
-if (score.length > 10) {
-    score.pop();
-    localStorage.setItem('scoreArray', JSON.stringify(score));
+    if (typeof(storageScore) === "undefined" || storageScore === "") {
+        score = [];
+    } else {
+        score = JSON.parse(storageScore);
+    }
+
+    if (score.length > 10) {
+        score.pop();
+        localStorage.setItem('scoreArray', JSON.stringify(score));
+    }
+
+    for (var i = 0; i < score.length; i++) {
+        text = score[i];
+        if (text == 1)
+            text += " point";
+        else
+            text += " points";
+
+        item = $("<li>").text(text);
+        list.append(item);
+    }
+
+    $("#highscore-table").html(list);
 }
 
-for (var i = 0; i < score.length; i++) {
-    text = score[i];
-    if (text == 1)
-        text += " point";
-    else
-        text += " points";
+$(document).ready(function() {
+    loadHighscore();
 
-    item = $("<li>").text(text);
-    list.append(item);
-}
+    $("#clear-highscore").click(function() {
+        localStorage.setItem('scoreArray', JSON.stringify([]));
 
-$("#highscore-table").html(list);
+        loadHighscore();
+    });
+});

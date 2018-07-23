@@ -86,7 +86,15 @@ function gameOver () {
 }
 
 function updateScore () {
-    var oldScore = JSON.parse(localStorage.getItem('scoreArray')) || [];
+    var storageScore = localStorage.getItem("scoreArray"),
+        oldScore;
+
+    if (typeof(storageScore) === "undefined" || storageScore === "") {
+        oldScore = [];
+    } else {
+        oldScore = JSON.parse(storageScore);
+    }
+
     oldScore.push(score);
     oldScore.sort(function (a, b) { return b - a; });
     localStorage.setItem('scoreArray', JSON.stringify(oldScore));

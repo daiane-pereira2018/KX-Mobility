@@ -32,33 +32,9 @@ body .btn.btn-outline-primary {
     border-color: #63ace5;
 }
 
-body .btn.btn-outline-primary:not(:disabled):not(.disabled):hover,
-body .btn.btn-outline-primary:not(:disabled):not(.disabled):active {
-    color: #e7eff6;
-    background-color: #63ace5;
-    border-color: #63ace5;
-}
-
-body .snake-body {
-    background-color: green;
-}
-  
-body .food {
-    background-color: #ff0800;
-}
-
 /*
 * Header
 */
-header {
-    margin: 1rem 0 2rem;
-    border-bottom: .25rem solid transparent;
-}
-
-header h3 {
-    color: #e7eff6;
-}
-
 header .nav .nav-link {
     font-weight: 700;
     color: #adcbe3;
@@ -86,6 +62,45 @@ header .nav .active {
 }
 
 /*
+* Main
+*/
+main {
+    padding-bottom: 60px;
+}
+
+li.media img {
+    width: 64px;
+    height: 64px;
+}
+
+main .btn.btn-outline-primary:not(:disabled):not(.disabled):hover,
+main .btn.btn-outline-primary:not(:disabled):not(.disabled):active {
+    color: #e7eff6;
+    background-color: #63ace5;
+    border-color: #63ace5;
+}
+
+main .btn.btn-outline-secondary {
+    color: #2a4d69;
+    border-color: #2a4d69;
+}
+
+main .btn.btn-outline-secondary:not(:disabled):not(.disabled):hover,
+main .btn.btn-outline-secondary:not(:disabled):not(.disabled):active {
+    color: #e7eff6;
+    background-color: #2a4d69;
+    border-color: #2a4d69;
+}
+
+main .snake-body {
+    background-color: green;
+}
+
+main .food {
+    background-color: #ff0800;
+}
+
+/*
 * Footer
 */
 .footer {
@@ -93,4 +108,7 @@ header .nav .active {
     position: fixed;
     bottom: 0;
     width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #adcbe3;
 }
