@@ -1,0 +1,118 @@
+.leftbar {
+    color:#ffffff;
+    height: 100%;
+    width: 25%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #1c73e6d2;
+    overflow-x: hidden;
+    border-right: 3px solid white;
+}
+/* 
+.title{
+    color:white;
+    background: #0d5384
+
+} */
+.content{
+    width: 70%;
+    padding-left: 10px;
+    background-color: white;
+}
+
+.inline{
+    display: -webkit-box
+}
+
+.rounded{
+    height: 150px;
+    border-radius: 50%;
+}
+body{
+    margin: 0;
+    background: #e6e6e6;
+}
+
+h5{
+    display: inline-block
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 6em;
+}
+
+
+.profile-container {
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.33);
+    text-align: center;
+    color: #fff;
+}
+
+.list-unstyled {
+    padding-left: 15px;
+    list-style: none;
+}
+
+.wrapper {
+    margin: 0 auto;
+}
+
+.contact-list {
+    margin-bottom: 0px;
+}
+
+.container {
+    color:#0d5384;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+.about-container,.skills-container {
+    padding: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 20px;
+}
+
+ul.list-unstyled.contact-list {
+    display: inline;
+}
+
+.contact-container.container-block {
+    padding: 10px;
+}
+
+.about-container h3 {
+    margin-top: 0px;
+}
+
+.contact-container li{
+    margin-bottom: 10px;
+}
+
+i.fa {
+    margin-right: 10px;
+}
+
+.skills-container p {
+    margin: 5px;
+}
+
+div.contact-container ul > li > a {
+    color: #fff;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+}
+
+div.contact-container ul > li > a:hover {
+  text-decoration: none;
+  color: rgb(43, 25, 25);
+  font-weight: 200;
+}
