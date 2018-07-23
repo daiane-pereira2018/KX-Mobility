@@ -1,1 +1,2 @@
-
+Site ainda em progresso, terá como objetivo ser responsivo para mobile, e permitir encapsulamento através de frameworks para criação de aplicativos hibridos.
+O objetivo principal deste site é facilitar na escolha do restaurante na hora do almoço.
