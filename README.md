@@ -1,5 +1,3 @@
-# KX-Mobility
-
 ## Plano de Estudos
 
 O objetivo deste repositório é agrupar todos os projetos realizados durante o progresso dos nossos estudos. Ele será organizado por tema e dentro de cada tema será dividido por integrante da equipe.
